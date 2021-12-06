@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+       * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #87CEFA;
+}
+
+#corpo {
+    width: 1000px;
+    background-color: #fff;
+    margin: 0 auto;
+    border-left: 2px solid #CCC;
+    border-right: 2px solid #CCC;
+}
+
+#topo{
+    padding: 20px 25px;
+    border-bottom: 2px solid #CCC;
+}
+
+#topo a{
+    color: #333;
+    text-decoration: none;
+    font: 20px Arial;
+    
+}
+
+#topo a:hover{
+    text-decoration: underline;
+}
+
+#conteudo {
+    background-color: #fff;
+    padding: 20px 25px;
+}
+
+#conteudo article{
+    margin-bottom: 20px;
+
+}
+article h2{
+    margin-bottom: 17px;
+}
+
+article h2 a{
+    font: 22px Arial ;
+    color: rgba(23, 37, 241, 0.89);
+    text-decoration: none; 
+}
+
+#conteudo h1{
+    font: 24px Arial;
+    color: #87CEFA;
+    margin-bottom: 20px;
+}
+
+article h2 a:hover{
+    text-decoration: underline;
+}
+
+article p{
+    font: 18px Arial;
+    color: #333;
+    padding-left: 2px;
+}
+   </style>
+</head>
+<body>
+    <div id="corpo">
+        <div id="topo">
+            <header>
+                <nav>
+                    <a href="#">HOME</a> |
+                    <a href="#">SOBRE</a>
+                </nav>
+            </header>
+        </div>
+
+        <div id="conteudo">
+            {{area_dinamica}}
+        </div>
+    </div>
+    
+</body>
+</html>
