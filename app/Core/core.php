@@ -18,7 +18,12 @@ class Core
             $controller = 'ERROCONTROLLER';
         }
 
+        if(isset($urlGet['id']) && $urlGet['id'] != null){
+            $id = $urlGet['id'];
+        } else {
+            $id = null;
+        }
         #Função que chame a HomeController e o metodo dela!(Chama funções de forma dinamica)
-        call_user_func_array(array(new $controller, $acao), array());
+        call_user_func_array(array(new $controller, $acao), array('id' => $id));
     }
 }
