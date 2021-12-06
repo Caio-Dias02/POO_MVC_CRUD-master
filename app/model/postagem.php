@@ -1,30 +1,32 @@
 <?php
 
-    class Postagem {
-        public static function selecionaTodos(){
+class Postagem
+{
+    public static function selecionaTodos()
+    {
 
 
-            $con = Connection::getConn();
-            
-            $sql = "SELECT * FROM postagem ORDER BY id DESC";
-                        #Vai preparar a execução do sql
-            $sql = $con->prepare($sql);
-            $sql->execute();
+        $con = Connection::getConn();
 
-            $resultado = array();
+        $sql = "SELECT * FROM postagem ORDER BY titulo DESC";
+        #Vai preparar a execução do sql
+        $sql = $con->prepare($sql);
+        $sql->execute();
 
-                        #Vai listar tudo que foi encontrado no sql
-            // var_dump($sql->fetchAll());
+        $resultado = array();
 
-                                #Vai pegar os registros do banco e transformar em objeto da classe Postagem
-            while($row = $sql->fetchObject('Postagem')){
-                $resultado[] = $row;
-            }
+        #Vai listar tudo que foi encontrado no sql
+        // var_dump($sql->fetchAll());
 
-            if (!$resultado){
-                throw new Exception("Não foi encontrado nenhum registro no banco");
-            }
-            
-            return $resultado;
+        #Vai pegar os registros do banco e transformar em objeto da classe Postagem
+        while ($row = $sql->fetchObject('Postagem')) {
+            $resultado[] = $row;
         }
+
+        if (!$resultado) {
+            throw new Exception("Não foi encontrado nenhum registro no banco");
+        }
+
+        return $resultado;
     }
+}
