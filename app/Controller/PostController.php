@@ -5,6 +5,7 @@ class PostController
     public function index($params)
     {
         try {
+
             $postagem =  Postagem::selecionaPorId($params);
             #Vai carregar as pastas aonde tem a View                           
             $loader = new \Twig\Loader\FilesystemLoader('app/View');
@@ -15,7 +16,9 @@ class PostController
 
             $parametros = array();
             $parametros['titulo'] = $postagem->titulo;
-            $parametros['conteudo'] = $postagem->postagem;
+            $parametros['conteudo'] = $postagem->conteudo;
+            $parametros['comentarios'] = $postagem->comentarios;
+
 
             $conteudo = $template->render($parametros);
             echo $conteudo;
@@ -28,6 +31,4 @@ class PostController
             echo $e->getMessage();
         }
     }
-
-   
 }
