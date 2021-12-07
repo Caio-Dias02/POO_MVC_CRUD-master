@@ -15,7 +15,7 @@ class PostController
 
             $parametros = array();
             $parametros['titulo'] = $postagem->titulo;
-            $parametros['conteudo'] = $postagem->conteudo;
+            $parametros['conteudo'] = $postagem->postagem;
 
             $conteudo = $template->render($parametros);
             echo $conteudo;

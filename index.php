@@ -6,6 +6,7 @@ require_once('app/Controller/PostController.php');
 require_once('app/model/postagem.php');
 require_once('lib/Database/Connection.php');
 require_once('vendor/autoload.php');
+require_once('app/model/comentario.php');
 
 $template = file_get_contents('app/Template/estrutura.html');
 
