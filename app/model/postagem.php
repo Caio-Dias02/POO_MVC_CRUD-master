@@ -47,8 +47,35 @@ class Postagem
         } else {
             $resultado->comentarios = Comentario::selecionarComentarios($resultado->id);
         }
-
-
         return $resultado;
+    }
+
+    public static function inserir($dadosPost)
+    {
+
+        if (empty($dadosPost['titulo']) or empty($dadosPost['conteudo'])) {
+            throw new Exception("Preencha todos os campos");
+
+            return false;
+        } else {
+            $con = Connection::getConn();
+
+            $sql = 'INSERT INTO postagem(titulo, conteudo) VALUES(:tit, :cont)';
+            $sql = $con->prepare($sql);
+
+            #Trocar os valores
+            $sql->bindValue(':tit', $dadosPost['titulo']);
+            $sql->bindValue(':cont', $dadosPost['conteudo']);
+            $res = $sql->execute();
+
+            if($res == 0){
+                throw new Exception("Falha ao inserir publicação");
+
+                return false;
+            }
+
+                return True;
+
+        }
     }
 }

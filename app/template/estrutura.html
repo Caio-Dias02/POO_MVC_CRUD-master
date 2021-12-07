@@ -1,80 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   <style>
-       * {
-    margin: 0;
-    padding: 0;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-body {
-    background-color: #87CEFA;
-}
+        body {
+            background-color: #87CEFA;
+        }
 
-#corpo {
-    width: 1000px;
-    background-color: #fff;
-    margin: 0 auto;
-    border-left: 2px solid #CCC;
-    border-right: 2px solid #CCC;
-}
+        #corpo {
+            width: 1000px;
+            background-color: #fff;
+            margin: 0 auto;
+            border-left: 2px solid #CCC;
+            border-right: 2px solid #CCC;
+        }
 
-#topo{
-    padding: 20px 25px;
-    border-bottom: 2px solid #CCC;
-}
+        #topo {
+            padding: 20px 25px;
+            border-bottom: 2px solid #CCC;
+        }
 
-#topo a{
-    color: #333;
-    text-decoration: none;
-    font: 20px Arial;
-    
-}
+        #topo a {
+            color: #333;
+            text-decoration: none;
+            font: 20px Arial;
 
-#topo a:hover{
-    text-decoration: underline;
-}
+        }
 
-#conteudo {
-    background-color: #fff;
-    padding: 20px 25px;
-}
+        #topo a:hover {
+            text-decoration: underline;
+        }
 
-#conteudo article{
-    margin-bottom: 20px;
+        #conteudo {
+            background-color: #fff;
+            padding: 20px 25px;
+        }
 
-}
-article h2{
-    margin-bottom: 17px;
-}
+        #conteudo article {
+            margin-bottom: 20px;
 
-article h2 a{
-    font: 22px Arial ;
-    color: rgba(23, 37, 241, 0.89);
-    text-decoration: none; 
-}
+        }
 
-#conteudo h1{
-    font: 24px Arial;
-    color: #87CEFA;
-    margin-bottom: 20px;
-}
+        article h2 {
+            margin-bottom: 17px;
+        }
 
-article h2 a:hover{
-    text-decoration: underline;
-}
+        article h2 a {
+            font: 22px Arial;
+            color: rgba(23, 37, 241, 0.89);
+            text-decoration: none;
+        }
 
-article p{
-    font: 18px Arial;
-    color: #333;
-    padding-left: 2px;
-}
-   </style>
+        #conteudo h1 {
+            font: 24px Arial;
+            color: #87CEFA;
+            margin-bottom: 20px;
+        }
+
+        article h2 a:hover {
+            text-decoration: underline;
+        }
+
+        article p {
+            font: 18px Arial;
+            color: #333;
+            padding-left: 2px;
+        }
+
+        .flutuacao-dir {
+            float: right;
+        }
+    </style>
 </head>
+
 <body>
     <div id="corpo">
         <div id="topo">
@@ -82,6 +89,7 @@ article p{
                 <nav>
                     <a href="http://localhost/POO_MVC_CRUD-master/?pagina=home">HOME</a> |
                     <a href="http://localhost/POO_MVC_CRUD-master/?pagina=sobre">SOBRE</a>
+                    <a href="http://localhost/POO_MVC_CRUD-master/?pagina=admin&metodo=index" class="flutuacao-dir">Admin</a>
                 </nav>
             </header>
         </div>
@@ -90,6 +98,7 @@ article p{
             {{area_dinamica}}
         </div>
     </div>
-    
+
 </body>
+
 </html>

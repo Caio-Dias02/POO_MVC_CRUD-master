@@ -1,0 +1,25 @@
+<h1>Gerenciador de Conteudo</h1>
+
+<a href="http://localhost/POO_MVC_CRUD-master/?pagina=admin&metodo=create">Criar Publicação</a>
+<br>
+<br>
+<hr>
+<br>
+
+<table border="2">
+    <tr>
+        <th>ID</th>
+        <th>TÍTULO</th>
+        <th>ALTERAÇÃO</th>
+        <th>DELEÇÃO</th>
+    </tr>
+    
+    {% for postagem in postagens %}
+    <tr>
+        <th>{{postagem.id}}</th>
+        <th>{{postagem.titulo}}</th>
+        <th>ALTERAÇÃO</th>
+        <th>DELEÇÃO</th>
+    </tr>
+    {% endfor %}
+</table>

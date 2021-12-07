@@ -6,7 +6,12 @@ class Core
     public function start($urlGet)
     {
 
-        $acao = 'index';
+        if (isset($urlGet['metodo'])) {
+            $acao = $urlGet['metodo'];
+        } else {
+            $acao = 'index';
+        }
+
 
         if (isset($urlGet['pagina'])) {
             $controller = ucfirst($urlGet['pagina'] . 'Controller');
@@ -18,7 +23,7 @@ class Core
             $controller = 'ERROCONTROLLER';
         }
 
-        if(isset($urlGet['id']) && $urlGet['id'] != null){
+        if (isset($urlGet['id']) && $urlGet['id'] != null) {
             $id = $urlGet['id'];
         } else {
             $id = null;
