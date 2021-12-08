@@ -28,7 +28,7 @@ class Core
         } else {
             $id = null;
         }
-        #Função que chame a HomeController e o metodo dela!(Chama funções de forma dinamica)
+        #Função que chame a Controller e o metodo dela!(Chama funções de forma dinamica)
         call_user_func_array(array(new $controller, $acao), array('id' => $id));
     }
 }

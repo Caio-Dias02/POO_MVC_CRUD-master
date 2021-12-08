@@ -18,8 +18,8 @@
     <tr>
         <th>{{postagem.id}}</th>
         <th>{{postagem.titulo}}</th>
-        <th>ALTERAÇÃO</th>
-        <th>DELEÇÃO</th>
+        <th><a href="http://localhost/POO_MVC_CRUD-master/?pagina=admin&metodo=change&id={{postagem.id}}">ALTERAÇÃO</a></th>
+        <th><a href="http://localhost/POO_MVC_CRUD-master/?pagina=admin&metodo=delete&id={{postagem.id}}">DELEÇÃO</a></th>
     </tr>
     {% endfor %}
 </table>
